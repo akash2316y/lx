@@ -5,24 +5,24 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 # Recommended
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7403693425:AAHwGyWW_sVf6Ips2J1Mh8uQyMjgDiy3mIk")
-APP_ID = int(os.environ.get("APP_ID", "28264594"))
-API_HASH = os.environ.get("API_HASH", "94ca8a089020a2290fd29a41f18acb94")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+APP_ID = int(os.environ.get("APP_ID", ""))
+API_HASH = os.environ.get("API_HASH", "")
 
 # Main
-OWNER_ID = int(os.environ.get("OWNER_ID", "5585016974"))
+OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 PORT = os.environ.get("PORT", "8012")
 
 # Database
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://probito140:umaid2008@cluster0.1utfc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DB_NAME = os.environ.get("DATABASE_NAME", "link")
+DB_URI = os.environ.get("DATABASE_URL", "")
+DB_NAME = os.environ.get("DATABASE_NAME", "")
 # --- LOG CHANNEL ---
-DATABASE_CHANNEL = int(os.environ.get("DATABASE_CHANNEL", "-1003693002045"))
+DATABASE_CHANNEL = int(os.environ.get("DATABASE_CHANNEL", ""))
 #Auto approve 
 CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()]
 TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @PornhwaArena</b>")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
-SESSION_STRING = os.getenv("SESSION_STRING", "BQFF0UAAPahxpGcYvKrMDWIn3pfDDJlnsSJKJ1vcNoz6n-3huMEdzY6UV1ryFJKpiAwocxBo7WboD6TMTwxk4Md2MIDSo5TuR1ma6ORB9xpiV-A8mNsYCR1btsk7_6auzZD5WKgskdqCIyBZdikC3TrAiHCf5YIthg6bos0E-UbcTtjLIKtWIsMljiQc4Zmo4lUtl4b-oFUgXt0GqsVSeCBnfj7wU8WuxJnFyqhXvjPCqSvoz5-A5CDeux1Kw5Et0P-qmLijmxWG5FuHunTMhrxo3-_wYdz2bstKjQ_n6vSh_HI2F6kXLsAco7SItiA3CX6vExjlnVOfywY57k7G4EyiEH0GewAAAAHUKp-AAA")
+SESSION_STRING = os.getenv("SESSION_STRING", "")
 
 # Default
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "40"))
