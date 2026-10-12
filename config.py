@@ -1,5 +1,7 @@
 # +++ Made By Obito [telegram username: @i_killed_my_clan] +++ #
 import os
+from dotenv import load_dotenv
+load_dotenv()
 from os import environ
 import logging
 from logging.handlers import RotatingFileHandler
