@@ -1,10 +1,13 @@
+pymongo>=4.9
+motor>=3.6
+pyOpenSSL>=24.3
+cryptography>=43
 kurigram==2.2.19
 TgCrypto
 pyromod
 python-dotenv
 pymongo
 dnspython
-motor
 aiohttp
 asyncio
 aiofiles
