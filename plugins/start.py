@@ -1,6 +1,6 @@
 import asyncio
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, Message
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, Message, InputMediaPhoto
 from pyrogram.enums import ParseMode
 from pyrogram.errors import FloodWait, PeerIdInvalid, UserIsBlocked, InputUserDeactivated
 from config import OWNER_ID, START_PIC
@@ -208,11 +208,7 @@ async def callback_handler(client: Client, query: CallbackQuery):
 
     elif data == "start_menu":
         await query.message.edit_media(
-            media=START_PIC,
-            reply_markup=start_markup()
-        )
-        await query.message.edit_caption(
-            caption=CHANNEL_HELP_START,
+            media=InputMediaPhoto(START_PIC, caption=CHANNEL_HELP_START),
             reply_markup=start_markup()
         )
 
