@@ -2,7 +2,7 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.enums import ChatMemberStatus, ParseMode
-from database.database import get_all_channels
+from database.database import get_channels
 from helper_func import is_owner_or_admin
 
 WELCOME_SETTINGS = {
@@ -39,7 +39,7 @@ async def toggle_wl_settings(client: Client, query: CallbackQuery):
 
 @Client.on_chat_member_updated(filters.channel, group=6)
 async def handle_channel_members(client: Client, update: ChatMemberUpdated):
-    channels = await get_all_channels()
+    ch_ids = await get_channels()
     ch_ids = [ch["id"] for ch in channels]
     chat_id = update.chat.id
     
