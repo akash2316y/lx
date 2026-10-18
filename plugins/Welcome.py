@@ -40,9 +40,8 @@ async def toggle_wl_settings(client: Client, query: CallbackQuery):
 @Client.on_chat_member_updated(filters.channel, group=6)
 async def handle_channel_members(client: Client, update: ChatMemberUpdated):
     ch_ids = await get_channels()
-    ch_ids = [ch["id"] for ch in channels]
     chat_id = update.chat.id
-    
+
     if chat_id not in ch_ids:
         return
         
